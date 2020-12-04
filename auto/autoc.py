@@ -1,5 +1,5 @@
 import socket
-
+import sys
 sock=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 sock.connect(("127.0.0.1",8301))
 
@@ -16,5 +16,5 @@ def send(data:str):
 
 import time;time.sleep(0.1)
 send("clear")
-send("LD_LIBRARY_PATH=/usr/local/lib make && ./notepadsh")
+send(" ".join(sys.argv))
 sock.close()
