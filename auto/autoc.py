@@ -16,5 +16,5 @@ def send(data:str):
 
 import time;time.sleep(0.1)
 send("clear")
-send(" ".join(sys.argv))
+send(" ".join(sys.argv[1:]))
 sock.close()
